@@ -31,6 +31,7 @@ jobs:
 
       - name: Pack
         run: dotnet pack \
+          src/TheTimeLedger.SharedKernel/TheTimeLedger.SharedKernel.csproj \
           -c Release \
           -p:PackageVersion=${{ env.VERSION }} \
           -o out
