@@ -11,13 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0AB3BF05
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheTimeLedger.SharedKernel.Tests", "tests\TheTimeLedger.SharedKernel.Tests\TheTimeLedger.SharedKernel.Tests.csproj", "{5BA5D04C-3BEB-4911-990A-E9BF4D1ED8CF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{6C83A596-D32D-B35F-00DD-F0C99B673980}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{3432DA67-BA28-4766-A9CD-FA62792D9D79}"
-	ProjectSection(SolutionItems) = preProject
-		release.yml = release.yml
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,7 +52,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6CA69348-B38B-4C70-BB37-8302D6C29F28} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{5BA5D04C-3BEB-4911-990A-E9BF4D1ED8CF} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
-		{3432DA67-BA28-4766-A9CD-FA62792D9D79} = {6C83A596-D32D-B35F-00DD-F0C99B673980}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FEDF13D0-63AB-42D4-81E9-EC794E409689}
