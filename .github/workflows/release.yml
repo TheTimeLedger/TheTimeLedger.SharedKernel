@@ -23,18 +23,19 @@ jobs:
           dotnet-version: "8.0.x"
 
       - name: Extract version from tag
-        run: |
-          echo "VERSION=${GITHUB_REF_NAME#v}" >> $GITHUB_ENV
+        run: echo "VERSION=${GITHUB_REF_NAME#v}" >> $GITHUB_ENV
 
       - name: Restore
         run: dotnet restore
 
       - name: Pack
+        working-directory: src/TheTimeLedger.SharedKernel
         run: dotnet pack \
-          src/TheTimeLedger.SharedKernel/TheTimeLedger.SharedKernel.csproj \
+          TheTimeLedger.SharedKernel.csproj \
           -c Release \
           -p:PackageVersion=${{ env.VERSION }} \
-          -o out
+          -o ../../out \
+          --no-restore
 
       - name: Push to GitHub Packages
         run: dotnet nuget push "out/*.nupkg" \
